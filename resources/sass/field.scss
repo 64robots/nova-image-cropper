@@ -1,0 +1,24 @@
+// Nova Tool CSS
+
+.el-upload,
+.el-upload-dragger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.el-upload-dragger {
+  flex-direction: column;
+}
+.picker-wrapper {
+  background-color: #ffffff;
+  border: solid 1px #c4cdd5;
+  text-align: center;
+}
+.picker-file {
+  width: 100%;
+  height: 272px;
+  padding: 10px;
+}
