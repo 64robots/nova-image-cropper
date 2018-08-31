@@ -2,6 +2,10 @@
 
 This field extends Image Field adding a handy cropper to manipulate images. Can be configurable in the same way as a [File field in Nova](https://nova.laravel.com/docs/1.0/resources/file-fields.html).
 
+### Demo
+
+![Demo](http://g.recordit.co/qQtTksj1AU.gif)
+
 ### Install
 
 Run this command into your nova project:
