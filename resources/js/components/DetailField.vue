@@ -1,9 +1,9 @@
 <template>
-    <panel-item :field="field">
-         <div slot="value">
-             <img :src="field.previewUrl" />
-         </div>
-    </panel-item>
+  <panel-item :field="field">
+    <div slot="value">
+      <img :src="field.previewUrl" />
+    </div>
+  </panel-item>
 </template>
 
 <script>

@@ -16,15 +16,15 @@
       <div
         class="btn btn-default btn-primary mr-3 cursor-pointer"
         @click="$emit('finished')"
-      >Cancel Crop</div>
+      >{{__('Cancel Crop')}}</div>
       <label
         for="file"
         class="btn btn-default btn-primary mr-3 cursor-pointer"
-      >Change Image</label>
+      >{{__('Change Image')}}</label>
       <div
         class="btn btn-default btn-primary cursor-pointer"
         @click="cropImage"
-      >Done</div>
+      >{{__('Done')}}</div>
     </div>
     <br />
     <div :class="{ 'cropper-wrapper': imgSrc }">
