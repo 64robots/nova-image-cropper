@@ -15,13 +15,6 @@ class ImageCropper extends Image
     public $component = 'nova-image-cropper';
 
     /**
-     * Indicates if the element should be shown on the index view.
-     *
-     * @var bool
-     */
-    public $showOnIndex = false;
-
-    /**
      * Create a new field.
      *
      * @param  string  $name
