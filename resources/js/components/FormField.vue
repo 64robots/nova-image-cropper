@@ -7,6 +7,7 @@
             ref="picturePicker"
             v-show="editingImage || !value"
             v-model="value"
+            :is-avatar="field.isAvatar"
             @finished="editingImage = false"
             @fileChanged="setFile"
           />
@@ -22,7 +23,10 @@
                 @click="confirmRemoval"
               >{{__('Delete')}}</a>
             </div>
-            <img :src="value">
+            <img
+              :src="value"
+              :class="{ avatar: field.isAvatar }"
+            >
           </template>
 
           <p v-if="hasError" class="my-2 text-danger">
@@ -181,3 +185,12 @@ export default {
   }
 };
 </script>
+<style scoped>
+.avatar {
+  object-fit: cover;
+  width: 318px;
+  height: 318px;
+  border-radius: 9999px;
+  margin: 20px 0;
+}
+</style>

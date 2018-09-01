@@ -31,6 +31,8 @@
       <VueCropper
         v-show="imgSrc"
         ref='cropper'
+        :class="{ avatar: isAvatar }"
+        :aspect-ratio="isAvatar"
         :guides="true"
         :view-mode="1"
         drag-mode="crop"
@@ -60,7 +62,7 @@ export default {
 
   components: { VueCropper, PicturePickerFile },
 
-  props: ['value'],
+  props: ['value', 'isAvatar'],
 
   data() {
     return {

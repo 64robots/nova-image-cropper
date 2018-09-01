@@ -42,4 +42,8 @@ class ImageCropper extends Image
             return 'data:image/' . $filetype . ';base64,' . base64_encode(file_get_contents($url));
         });
     }
+
+    public function avatar() {
+        return $this->withMeta(['isAvatar' => true]);
+    }
 }

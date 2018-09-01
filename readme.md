@@ -36,6 +36,16 @@ ImageCropper::make('Photo')
         });
 ```
 
+### Options
+
+#### Avatar mode
+
+You can add a rounded mask to the preview and the cropper
+
+```php
+ImageCropper::make('Photo')->avatar()
+```
+
 ### Localization
 
 Set your translations in the corresponding xx.json file located in `/resources/lang/vendor/nova`
@@ -46,5 +56,6 @@ Set your translations in the corresponding xx.json file located in `/resources/l
   "Edit Image": "Editar Imagen",
   "Cancel Crop": "Cancelar Recorte",
   "Change Image": "Cambiar Imagen",
-  "Done": "Hecho"
+  "Done": "Hecho",
+  "Click here or drop the file to upload": "Click aquí o arrastra el archivo para comenzar la subida"
 ```
