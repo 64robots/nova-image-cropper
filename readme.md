@@ -4,7 +4,7 @@ This field extends Image Field adding a handy cropper to manipulate images. Can 
 
 ### Demo
 
-![Demo](http://g.recordit.co/qQtTksj1AU.gif)
+![Demo](http://g.recordit.co/9ubWDbqNNL.gif)
 
 ### Install
 

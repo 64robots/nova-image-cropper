@@ -7,8 +7,7 @@
     :on-change="onChange"
     :show-file-list="false"
   >
-    <div class="default-button">Upload Image</div>
-    <div>or drop files to upload</div>
+    <div>{{__('Click here or drop the file to upload')}}</div>
   </el-upload>
 </template>
 <script>

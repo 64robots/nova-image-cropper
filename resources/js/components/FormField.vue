@@ -75,6 +75,13 @@ export default {
      */
     shouldShowRemoveButton() {
       return Boolean(this.field.deletable);
+    },
+
+    /**
+     * Determine if should hit the endpoint for delete
+     */
+    imageExistsOnServer() {
+      return Boolean(this.field.previewUrl);
     }
   },
 
@@ -128,8 +135,14 @@ export default {
      * Remove the linked file from storage
      */
     async removeFile() {
-      this.deleting = true;
       this.closeRemoveModal();
+
+      if (!this.imageExistsOnServer) {
+        this.resetFile();
+        return;
+      }
+
+      this.deleting = true;
       this.uploadErrors = new Errors();
 
       const {
