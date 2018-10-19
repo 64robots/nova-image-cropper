@@ -28,15 +28,37 @@ class ImageCropper extends Image
         parent::__construct($name, $attribute, $disk, $storageCallback);
 
         $this->preview(function () {
-            if (!$this->value) return null;
+            if (!$this->value) {
+                return null;
+            }
 
             $url = Storage::disk($this->disk)->url($this->value);
-            $filetype = pathinfo($url)['extension'];
-            return 'data:image/' . $filetype . ';base64,' . base64_encode(file_get_contents($url));
+
+            $path_info = pathinfo($url);
+
+            $filetype = 'jpg';
+
+            if (array_key_exists('extension', $path_info)) {
+                $filetype = $path_info['extension'];
+            }
+
+            try {
+                $encoded_file = base64_encode(file_get_contents($url));
+            } catch (\Exception $e) {
+                return '';
+            }
+
+            return 'data:image/' . $filetype . ';base64,' . $encoded_file;
         });
     }
 
-    public function avatar() {
+    public function avatar()
+    {
         return $this->withMeta(['isAvatar' => true]);
+    }
+
+    public function aspectRatio($ratio)
+    {
+        return $this->withMeta(['aspectRatio' => $ratio]);
     }
 }

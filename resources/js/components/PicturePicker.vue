@@ -32,7 +32,7 @@
         v-show="imgSrc"
         ref='cropper'
         :class="{ avatar: isAvatar }"
-        :aspect-ratio="isAvatar"
+        :aspect-ratio="ratio"
         :guides="true"
         :view-mode="1"
         drag-mode="crop"
@@ -53,16 +53,16 @@
 </div>
 </template>
 <script>
-import VueCropper from 'vue-cropperjs';
-import { resizeImage } from '../utils/image';
-import PicturePickerFile from './PicturePickerFile';
+import VueCropper from 'vue-cropperjs'
+import { resizeImage } from '../utils/image'
+import PicturePickerFile from './PicturePickerFile'
 
 export default {
   name: 'PicturePicker',
 
   components: { VueCropper, PicturePickerFile },
 
-  props: ['value', 'isAvatar'],
+  props: ['value', 'isAvatar', 'aspectRatio'],
 
   data() {
     return {
@@ -72,81 +72,90 @@ export default {
       cropImg: '',
       cropImgW: 0,
       cropImgH: 0
-    };
+    }
+  },
+
+  computed: {
+    ratio() {
+      if (this.isAvatar) {
+        return 1
+      }
+      return this.aspectRatio
+    }
   },
 
   watch: {
     value(image) {
-      this.updateCropper(image);
+      this.updateCropper(image)
     }
   },
 
   methods: {
     updateCropper(image) {
-      this.imgSrc = image;
-      this.cropImg = image;
+      this.imgSrc = image
+      this.cropImg = image
 
       if (this.$refs.cropper) {
-        this.$refs.cropper.replace(image);
+        this.$refs.cropper.replace(image)
       }
     },
 
     setImage(e) {
-      let file;
+      let file
 
       if (e.raw) {
-        file = e.raw;
+        file = e.raw
       } else {
-        file = e.target.files[0];
+        file = e.target.files[0]
       }
 
       if (!file.type.includes('image/')) {
-        alert('Please select an image file');
-        return;
+        alert('Please select an image file')
+        return
       }
 
       if (typeof FileReader === 'function') {
-        const reader = new FileReader();
+        const reader = new FileReader()
 
         reader.onload = event => {
           resizeImage(
             event.target.result,
             file.type,
             ({ dataUrl, width, height, file }) => {
-              this.updateCropper(dataUrl);
-              this.$emit('input', dataUrl);
-              this.$emit('setWidth', width);
-              this.$emit('setHeight', height);
-              this.$emit('fileChanged', file);
-              this.$emit('finished');
+              this.updateCropper(dataUrl)
+              this.$emit('input', dataUrl)
+              this.$emit('setWidth', width)
+              this.$emit('setHeight', height)
+              this.$emit('fileChanged', file)
+              this.$emit('finished')
             }
-          );
-        };
+          )
+        }
 
-        reader.readAsDataURL(file);
+        reader.readAsDataURL(file)
       } else {
-        alert('Sorry, FileReader API not supported');
+        alert('Sorry, FileReader API not supported')
       }
     },
 
     cropImage() {
-      const canvas = this.$refs.cropper.getCroppedCanvas();
-      this.cropImgW = canvas.width;
-      this.cropImgH = canvas.height;
-      this.cropImg = canvas.toDataURL();
+      const canvas = this.$refs.cropper.getCroppedCanvas()
+      this.cropImgW = canvas.width
+      this.cropImgH = canvas.height
+      this.cropImg = canvas.toDataURL()
       canvas.toBlob(blob => {
-        const { type } = blob;
+        const { type } = blob
         const file = new File([blob], 'uploaded_file.jpg', {
           type,
           lastModified: Date.now()
-        });
-        this.$emit('input', this.cropImg);
-        this.$emit('fileChanged', file);
-        this.$emit('finished');
-      });
+        })
+        this.$emit('input', this.cropImg)
+        this.$emit('fileChanged', file)
+        this.$emit('finished')
+      })
     }
   }
-};
+}
 </script>
 <style scoped>
 .cropper-wrapper {
