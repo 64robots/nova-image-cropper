@@ -42,19 +42,20 @@ ImageCropper::make('Photo')
 
 You can add a rounded mask to the preview and the cropper
 
-````php
+```php
 ImageCropper::make('Photo')->avatar()
+```
 
 #### Custom aspect ratio
 
 Define the fixed aspect ratio of the crop box. By default, the crop box is free ratio.
 
-* Type: Number
-* Default: NaN
+- Type: Number
+- Default: NaN
 
 ```php
 ImageCropper::make('Photo')->aspectRatio(16/9)
-````
+```
 
 ### Localization
 
