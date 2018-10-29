@@ -66,7 +66,7 @@ export default {
   data() {
     return {
       deleting: false,
-      editingImage: false,
+      editingImage: true,
       file: null,
       fileName: '',
       removeModalOpen: false,

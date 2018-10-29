@@ -127,7 +127,6 @@ export default {
               this.$emit('setWidth', width)
               this.$emit('setHeight', height)
               this.$emit('fileChanged', file)
-              this.$emit('finished')
             }
           )
         }
