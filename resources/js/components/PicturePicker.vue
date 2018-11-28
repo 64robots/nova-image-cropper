@@ -1,14 +1,14 @@
 <template>
   <div :class="{ 'picker-wrapper': imgSrc }">
     <input
-      id="file"
+      :id="hash"
       class="inputfile"
       type="file"
       name="image"
       accept="image/*"
       style="font-size: 1.2em; padding: 10px 0;"
       @change="setImage"
-    />
+    >
     <div
       class="bg-30 flex px-8 py-4"
       v-if="imgSrc"
@@ -18,7 +18,7 @@
         @click="$emit('finished')"
       >{{__('Cancel Crop')}}</div>
       <label
-        for="file"
+        :for="hash"
         class="btn btn-default btn-primary mr-3 cursor-pointer"
       >{{__('Change Image')}}</label>
       <div
@@ -26,11 +26,11 @@
         @click="cropImage"
       >{{__('Done')}}</div>
     </div>
-    <br />
+    <br>
     <div :class="{ 'cropper-wrapper': imgSrc }">
       <VueCropper
         v-show="imgSrc"
-        ref='cropper'
+        ref="cropper"
         :class="{ avatar: isAvatar }"
         :aspect-ratio="ratio"
         :guides="true"
@@ -49,8 +49,8 @@
         @change="setImage"
       />
     </div>
-    <br />
-</div>
+    <br>
+  </div>
 </template>
 <script>
 import VueCropper from 'vue-cropperjs'
@@ -66,6 +66,9 @@ export default {
 
   data() {
     return {
+      hash: Math.random()
+        .toString(36)
+        .substring(7),
       imgSrc: '',
       minWidth: 584,
       minHeight: 322,
