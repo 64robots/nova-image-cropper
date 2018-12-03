@@ -2,7 +2,7 @@
   <el-upload
     class="upload"
     drag
-    action=""
+    action
     :auto-upload="false"
     :on-change="onChange"
     :show-file-list="false"
@@ -11,7 +11,7 @@
   </el-upload>
 </template>
 <script>
-import { Upload } from 'element-ui';
+import { Upload } from 'element-ui'
 
 export default {
   name: 'PicturePickerFile',
@@ -20,10 +20,10 @@ export default {
 
   methods: {
     onChange(e) {
-      this.$emit('change', e);
+      this.$emit('change', e)
     }
   }
-};
+}
 </script>
 <style scoped>
 .upload {

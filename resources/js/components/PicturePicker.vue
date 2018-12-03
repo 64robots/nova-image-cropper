@@ -27,21 +27,13 @@
       >{{__('Done')}}</div>
     </div>
     <br>
-    <div :class="{ 'cropper-wrapper': imgSrc }">
-      <VueCropper
+    <div class="cropper-wrapper">
+      <PictureCropper
         v-show="imgSrc"
         ref="cropper"
+        :image="imgSrc"
+        :ratio="ratio"
         :class="{ avatar: isAvatar }"
-        :aspect-ratio="ratio"
-        :guides="true"
-        :view-mode="1"
-        drag-mode="crop"
-        :auto-crop-area="1"
-        :min-container-width="minWidth"
-        :min-container-height="minHeight"
-        :background="true"
-        :checkCrossOrigin="false"
-        :src="imgSrc"
       />
       <PicturePickerFile
         v-if="!imgSrc"
@@ -53,14 +45,14 @@
   </div>
 </template>
 <script>
-import VueCropper from 'vue-cropperjs'
 import { resizeImage } from '../utils/image'
 import PicturePickerFile from './PicturePickerFile'
+import PictureCropper from './PictureCropper'
 
 export default {
   name: 'PicturePicker',
 
-  components: { VueCropper, PicturePickerFile },
+  components: { PicturePickerFile, PictureCropper },
 
   props: ['value', 'isAvatar', 'aspectRatio'],
 
@@ -70,8 +62,7 @@ export default {
         .toString(36)
         .substring(7),
       imgSrc: '',
-      minWidth: 584,
-      minHeight: 322,
+      maxWidth: 584,
       cropImg: '',
       cropImgW: 0,
       cropImgH: 0
@@ -84,6 +75,12 @@ export default {
         return 1
       }
       return this.aspectRatio
+    },
+
+    wrapperStyle() {
+      return {
+        padding: '10px 20px'
+      }
     }
   },
 
@@ -161,9 +158,6 @@ export default {
 </script>
 <style scoped>
 .cropper-wrapper {
-  display: flex;
-  justify-content: center;
-  max-width: 900px;
   padding: 10px 20px;
 }
 .edit-buttons {
