@@ -82,7 +82,7 @@ export default {
         return
       }
       this.width = width
-      this.height = this.width / this.ratio
+      this.height = this.ratio ? this.width / this.ratio : this.height
     },
 
     getCroppedCanvas() {
