@@ -66,7 +66,8 @@ export default {
       cropImg: '',
       cropImgW: 0,
       cropImgH: 0,
-      originalName: 'uploaded_file.jpg'
+      originalName: 'uploaded_file.jpg',
+      originalFileType: 'image/jpeg'
     }
   },
 
@@ -116,6 +117,7 @@ export default {
       }
 
       this.originalName = file.name
+      this.originalFileType = file.type
 
       if (typeof FileReader === 'function') {
         const reader = new FileReader()
@@ -154,7 +156,7 @@ export default {
         this.$emit('input', this.cropImg)
         this.$emit('fileChanged', file)
         this.$emit('finished')
-      })
+      }, this.originalFileType)
     }
   }
 }
