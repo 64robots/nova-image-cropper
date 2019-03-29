@@ -65,7 +65,8 @@ export default {
       maxWidth: 584,
       cropImg: '',
       cropImgW: 0,
-      cropImgH: 0
+      cropImgH: 0,
+      originalName: 'uploaded_file.jpg'
     }
   },
 
@@ -114,6 +115,8 @@ export default {
         return
       }
 
+      this.originalName = file.name
+
       if (typeof FileReader === 'function') {
         const reader = new FileReader()
 
@@ -144,7 +147,7 @@ export default {
       this.cropImg = canvas.toDataURL()
       canvas.toBlob(blob => {
         const { type } = blob
-        const file = new File([blob], 'uploaded_file.jpg', {
+        const file = new File([blob], this.originalName, {
           type,
           lastModified: Date.now()
         })
