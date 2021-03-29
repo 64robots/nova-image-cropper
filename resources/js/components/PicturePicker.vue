@@ -38,7 +38,7 @@
       <PicturePickerFile
         v-if="!imgSrc"
         class="picker-file"
-        :style="novaWidth"
+        style="novaWidth"
         @change="setImage"
       />
     </div>
