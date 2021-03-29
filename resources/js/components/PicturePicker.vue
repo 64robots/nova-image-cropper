@@ -6,7 +6,7 @@
       type="file"
       name="image"
       accept="image/*"
-      style="font-size: 1.2em; padding: 10px 0;"
+      style="font-size: 1.2em; padding: 10px 0; maxWidth: novaWidth"
       @change="setImage"
     >
     <div
@@ -38,7 +38,6 @@
       <PicturePickerFile
         v-if="!imgSrc"
         class="picker-file"
-        style="novaWidth"
         @change="setImage"
       />
     </div>

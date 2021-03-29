@@ -615,7 +615,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -37154,7 +37153,11 @@ var render = function() {
   return _c("div", { class: { "picker-wrapper": _vm.imgSrc } }, [
     _c("input", {
       staticClass: "inputfile",
-      staticStyle: { "font-size": "1.2em", padding: "10px 0" },
+      staticStyle: {
+        "font-size": "1.2em",
+        padding: "10px 0",
+        maxWidth: "novaWidth"
+      },
       attrs: { id: _vm.hash, type: "file", name: "image", accept: "image/*" },
       on: { change: _vm.setImage }
     }),
@@ -37219,7 +37222,6 @@ var render = function() {
         !_vm.imgSrc
           ? _c("PicturePickerFile", {
               staticClass: "picker-file",
-              staticStyle: {},
               on: { change: _vm.setImage }
             })
           : _vm._e()
