@@ -15,10 +15,10 @@
     "cross-env": "^5.0.0",
     "element-ui": "^2.4.6",
     "laravel-mix": "^5.0.4",
-    "laravel-nova": "^1.0",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.26.7",
     "sass-loader": "^8.0.2",
+    "laravel-nova": "^1.0",
     "vue": "^2.6.11",
     "vue-template-compiler": "^2.6.11"
   }
