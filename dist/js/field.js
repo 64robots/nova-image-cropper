@@ -653,7 +653,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     novaWidth: function novaWidth() {
       return {
-        width: this.novaWidth + 'px'
+        maxWidth: this.novaWidth + 'px'
       };
     }
   },

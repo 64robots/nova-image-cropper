@@ -88,7 +88,7 @@ export default {
 
     novaWidth() {
         return {
-          width: this.novaWidth + 'px'
+          maxWidth: this.novaWidth + 'px'
         }
       }
   },
