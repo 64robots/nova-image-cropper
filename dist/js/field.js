@@ -37219,7 +37219,7 @@ var render = function() {
         !_vm.imgSrc
           ? _c("PicturePickerFile", {
               staticClass: "picker-file",
-              staticStyle: { "{width": "novaWidth}" },
+              style: _vm.novaWidth,
               on: { change: _vm.setImage }
             })
           : _vm._e()

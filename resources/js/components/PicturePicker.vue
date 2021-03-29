@@ -38,7 +38,7 @@
       <PicturePickerFile
         v-if="!imgSrc"
         class="picker-file"
-        style="{width: novaWidth}"
+        :style="novaWidth"
         @change="setImage"
       />
     </div>
@@ -87,10 +87,10 @@ export default {
     },
 
     novaWidth() {
-      return {
-        width: this.novaWidth
+        return {
+          width: this.novaWidth
+        }
       }
-    }
   },
 
   watch: {
