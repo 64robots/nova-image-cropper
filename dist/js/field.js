@@ -303,6 +303,7 @@ __webpack_require__(/*! element-ui/lib/theme-chalk/index.css */ "./node_modules/
 
     this.field.fill = function (formData) {
       if (_this.file) {
+        console.log(_this.field.attribute);
         formData.append(_this.field.attribute, _this.file, _this.fileName);
       }
     };
@@ -37153,11 +37154,7 @@ var render = function() {
   return _c("div", { class: { "picker-wrapper": _vm.imgSrc } }, [
     _c("input", {
       staticClass: "inputfile",
-      staticStyle: {
-        "font-size": "1.2em",
-        padding: "10px 0",
-        maxWidth: "novaWidth"
-      },
+      staticStyle: { "font-size": "1.2em", padding: "10px 0" },
       attrs: { id: _vm.hash, type: "file", name: "image", accept: "image/*" },
       on: { change: _vm.setImage }
     }),

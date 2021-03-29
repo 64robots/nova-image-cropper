@@ -6,7 +6,7 @@
       type="file"
       name="image"
       accept="image/*"
-      style="font-size: 1.2em; padding: 10px 0; maxWidth: novaWidth"
+      style="font-size: 1.2em; padding: 10px 0;"
       @change="setImage"
     >
     <div
