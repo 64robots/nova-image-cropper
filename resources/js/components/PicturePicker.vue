@@ -38,6 +38,7 @@
       <PicturePickerFile
         v-if="!imgSrc"
         class="picker-file"
+        style="{width: novaWidth}"
         @change="setImage"
       />
     </div>
@@ -54,7 +55,7 @@ export default {
 
   components: { PicturePickerFile, PictureCropper },
 
-  props: ['value', 'isAvatar', 'aspectRatio'],
+  props: ['value', 'isAvatar', 'aspectRatio', 'novaWidth'],
 
   data() {
     return {
@@ -82,6 +83,12 @@ export default {
     wrapperStyle() {
       return {
         padding: '10px 20px'
+      }
+    },
+
+    novaWidth() {
+      return {
+        width: this.novaWidth
       }
     }
   },

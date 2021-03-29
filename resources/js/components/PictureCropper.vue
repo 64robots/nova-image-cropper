@@ -26,6 +26,11 @@ export default {
     ratio: {
       type: Number,
       default: 1
+    },
+
+    novaWidth: {
+      type: Number,
+      default: 150
     }
   },
 

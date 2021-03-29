@@ -61,4 +61,9 @@ class ImageCropper extends Image
     {
         return $this->withMeta(['aspectRatio' => $ratio]);
     }
+
+    public function novaWidth($width)
+    {
+        return $this->withMeta(['novaWidth' => $width]);
+    }
 }

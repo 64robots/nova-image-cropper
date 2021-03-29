@@ -1242,6 +1242,10 @@ __webpack_require__.r(__webpack_exports__);
     ratio: {
       type: Number,
       "default": 1
+    },
+    novaWidth: {
+      type: Number,
+      "default": 150
     }
   },
   data: function data() {
@@ -1369,6 +1373,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -1378,7 +1383,7 @@ __webpack_require__.r(__webpack_exports__);
     PicturePickerFile: _PicturePickerFile__WEBPACK_IMPORTED_MODULE_1__["default"],
     PictureCropper: _PictureCropper__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
-  props: ['value', 'isAvatar', 'aspectRatio'],
+  props: ['value', 'isAvatar', 'aspectRatio', 'novaWidth'],
   data: function data() {
     return {
       hash: Math.random().toString(36).substring(7),
@@ -1402,6 +1407,11 @@ __webpack_require__.r(__webpack_exports__);
     wrapperStyle: function wrapperStyle() {
       return {
         padding: '10px 20px'
+      };
+    },
+    novaWidth: function novaWidth() {
+      return {
+        width: this.novaWidth
       };
     }
   },
@@ -36099,6 +36109,7 @@ var render = function() {
         !_vm.imgSrc
           ? _c("PicturePickerFile", {
               staticClass: "picker-file",
+              staticStyle: { "{width": "novaWidth}" },
               on: { change: _vm.setImage }
             })
           : _vm._e()
