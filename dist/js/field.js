@@ -258,6 +258,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 
 
@@ -36975,7 +36976,8 @@ var render = function() {
                   ref: "picturePicker",
                   attrs: {
                     "is-avatar": _vm.field.isAvatar,
-                    "aspect-ratio": _vm.field.aspectRatio
+                    "aspect-ratio": _vm.field.aspectRatio,
+                    "nova-width": _vm.field.novaWidth
                   },
                   on: {
                     finished: function($event) {
@@ -49917,9 +49919,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 Nova.booting(function (Vue, router) {
-  Vue.component('index-nova-image-cropper', __webpack_require__(/*! ./components/IndexField */ "./resources/js/components/IndexField.vue"));
-  Vue.component('detail-nova-image-cropper', __webpack_require__(/*! ./components/DetailField */ "./resources/js/components/DetailField.vue"));
-  Vue.component('form-nova-image-cropper', __webpack_require__(/*! ./components/FormField */ "./resources/js/components/FormField.vue"));
+  Vue.component('index-nova-image-cropper', __webpack_require__(/*! ./components/IndexField */ "./resources/js/components/IndexField.vue")["default"]);
+  Vue.component('detail-nova-image-cropper', __webpack_require__(/*! ./components/DetailField */ "./resources/js/components/DetailField.vue")["default"]);
+  Vue.component('form-nova-image-cropper', __webpack_require__(/*! ./components/FormField */ "./resources/js/components/FormField.vue")["default"]);
 });
 
 /***/ }),
