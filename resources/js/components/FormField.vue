@@ -9,7 +9,6 @@
             v-model="value"
             :is-avatar="field.isAvatar"
             :aspect-ratio="field.aspectRatio"
-            :nova-width="field.novaWidth"
             @finished="editingImage = false"
             @fileChanged="setFile"
           />

@@ -179,7 +179,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['resource', 'resourceName', 'resourceId', 'field']
 });
@@ -207,7 +206,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -296,12 +294,6 @@ __webpack_require__(/*! element-ui/lib/theme-chalk/index.css */ "./node_modules/
      */
     imageExistsOnServer: function imageExistsOnServer() {
       return Boolean(this.field.previewUrl);
-    },
-    novaWidth: function novaWidth() {
-      console.log(this.novaWidth);
-      return {
-        width: this.novaWidth + 'px'
-      };
     }
   },
   mounted: function mounted() {
@@ -36923,7 +36915,6 @@ var render = function() {
     _c("div", { attrs: { slot: "value" }, slot: "value" }, [
       _c("img", {
         class: { avatar: _vm.field.isAvatar },
-        staticStyle: {},
         attrs: { src: _vm.field.thumbnailUrl }
       })
     ])
@@ -36976,8 +36967,7 @@ var render = function() {
                   ref: "picturePicker",
                   attrs: {
                     "is-avatar": _vm.field.isAvatar,
-                    "aspect-ratio": _vm.field.aspectRatio,
-                    "nova-width": _vm.field.novaWidth
+                    "aspect-ratio": _vm.field.aspectRatio
                   },
                   on: {
                     finished: function($event) {
@@ -37026,7 +37016,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("img", {
                         class: { avatar: _vm.field.isAvatar },
-                        staticStyle: {},
+                        style: { width: _vm.novaWidth + "px" },
                         attrs: { src: _vm.value }
                       })
                     ]
