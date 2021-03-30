@@ -26,7 +26,7 @@ export default {
     ratio: {
       type: Number,
       default: 1
-    },
+    }
   },
 
   data() {

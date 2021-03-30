@@ -89,14 +89,13 @@ export default {
      */
     imageExistsOnServer() {
       return Boolean(this.field.previewUrl)
-    },
+    }
   },
 
   mounted() {
     this.value = this.field.previewUrl
     this.field.fill = formData => {
       if (this.file) {
-        console.log(this.field.attribute)
         formData.append(this.field.attribute, this.file, this.fileName)
       }
     }
