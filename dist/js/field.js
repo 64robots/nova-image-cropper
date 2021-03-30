@@ -180,7 +180,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['resource', 'resourceName', 'resourceId', 'field']
+  props: ['resource', 'resourceName', 'resourceId', 'field', 'novaWidth']
 });
 
 /***/ }),
@@ -429,6 +429,7 @@ __webpack_require__(/*! element-ui/lib/theme-chalk/index.css */ "./node_modules/
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -37089,6 +37090,7 @@ var render = function() {
           staticClass: "w-8 h-8",
           class: { "rounded-full": _vm.field.isAvatar },
           staticStyle: { "object-fit": "cover" },
+          style: { width: _vm.field.novaWidth + "px" },
           attrs: { src: _vm.field.thumbnailUrl }
         })
       : _c("span", [_vm._v(_vm._s(_vm.field.value || "—"))])
