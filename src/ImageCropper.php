@@ -64,6 +64,6 @@ class ImageCropper extends Image
 
     public function width($width)
     {
-        return $this->withMeta(['novaWidth' => $width]);
+        return $this->withMeta(['width' => $width]);
     }
 }
