@@ -298,6 +298,7 @@ __webpack_require__(/*! element-ui/lib/theme-chalk/index.css */ "./node_modules/
       return Boolean(this.field.previewUrl);
     },
     novaWidth: function novaWidth() {
+      console.log(this.novaWidth);
       return {
         width: this.novaWidth + 'px'
       };

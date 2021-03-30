@@ -93,6 +93,7 @@ export default {
     },
 
     novaWidth() {
+        console.log(this.novaWidth)
         return {
           width: this.novaWidth + 'px'
         }
