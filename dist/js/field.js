@@ -179,6 +179,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['resource', 'resourceName', 'resourceId', 'field']
 });
@@ -36924,6 +36925,7 @@ var render = function() {
     _c("div", { attrs: { slot: "value" }, slot: "value" }, [
       _c("img", {
         class: { avatar: _vm.field.isAvatar },
+        staticStyle: {},
         attrs: { src: _vm.field.thumbnailUrl }
       })
     ])
