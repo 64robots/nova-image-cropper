@@ -37029,7 +37029,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("img", {
                         class: { avatar: _vm.field.isAvatar },
-                        staticStyle: { width: "10px" },
+                        staticStyle: {},
                         attrs: { src: _vm.value }
                       })
                     ]
