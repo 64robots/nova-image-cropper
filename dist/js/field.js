@@ -37025,7 +37025,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("img", {
                         class: { avatar: _vm.field.isAvatar },
-                        style: _vm.novaWidth,
+                        staticStyle: {},
                         attrs: { src: _vm.value }
                       })
                     ]
