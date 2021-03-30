@@ -4,6 +4,7 @@
       <img
         :src="field.thumbnailUrl"
         :class="{ avatar: field.isAvatar }"
+        :style="{width: field.novaWidth + 'px'}"
       />
     </div>
   </panel-item>
