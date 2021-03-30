@@ -12,13 +12,13 @@
 
 <script>
 export default {
-  props: ['resource', 'resourceName', 'resourceId', 'field', 'novaWidth'],
+  props: ['resource', 'resourceName', 'resourceId', 'field', 'width'],
 };
 </script>
 <style scoped>
 .avatar {
   object-fit: cover;
-  width: 150px;
+  width: 318px;
   height: 318px;
   border-radius: 9999px;
   margin: 20px 0;

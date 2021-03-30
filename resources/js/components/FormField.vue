@@ -63,7 +63,7 @@ export default {
 
   mixins: [FormField, HandlesValidationErrors],
 
-  props: ['resourceName', 'resourceId', 'field', 'novaWidth'],
+  props: ['resourceName', 'resourceId', 'field', 'width'],
 
   data() {
     return {
