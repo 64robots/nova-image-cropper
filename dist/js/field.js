@@ -4534,7 +4534,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.avatar[data-v-0224618e] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  width: 318px;\n  height: 318px;\n  border-radius: 9999px;\n  margin: 20px 0;\n}\n", ""]);
+exports.push([module.i, "\n.avatar[data-v-0224618e] {\n  -o-object-fit: cover;\n     object-fit: cover;\n  width: 150px;\n  height: 318px;\n  border-radius: 9999px;\n  margin: 20px 0;\n}\n", ""]);
 
 // exports
 

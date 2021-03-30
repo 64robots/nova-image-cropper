@@ -18,7 +18,7 @@ export default {
 <style scoped>
 .avatar {
   object-fit: cover;
-  width: 318px;
+  width: 150px;
   height: 318px;
   border-radius: 9999px;
   margin: 20px 0;
