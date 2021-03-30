@@ -181,15 +181,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['resource', 'resourceName', 'resourceId', 'field', 'novaWidth'],
-  computed: {
-    novaWidth: function novaWidth() {
-      console.log('nova width detail');
-      return {
-        maxWidth: this.novaWidth + 'px'
-      };
-    }
-  }
+  props: ['resource', 'resourceName', 'resourceId', 'field']
 });
 
 /***/ }),
@@ -306,6 +298,7 @@ __webpack_require__(/*! element-ui/lib/theme-chalk/index.css */ "./node_modules/
       return Boolean(this.field.previewUrl);
     },
     novaWidth: function novaWidth() {
+      console.log('novaWidth on detail');
       return {
         width: this.novaWidth + 'px'
       };

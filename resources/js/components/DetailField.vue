@@ -12,17 +12,7 @@
 
 <script>
 export default {
-  props: ['resource', 'resourceName', 'resourceId', 'field', 'novaWidth'],
-
-
-  computed:{
-    novaWidth() {
-        console.log('nova width detail')
-        return {
-          maxWidth: this.novaWidth + 'px'
-        }
-      }
-  }
+  props: ['resource', 'resourceName', 'resourceId', 'field'],
 };
 </script>
 <style scoped>
