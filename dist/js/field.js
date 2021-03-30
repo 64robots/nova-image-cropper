@@ -181,7 +181,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['resource', 'resourceName', 'resourceId', 'field']
+  props: ['resource', 'resourceName', 'resourceId', 'field'],
+  computed: {
+    novaWidth: function novaWidth() {
+      return {
+        maxWidth: this.novaWidth + 'px'
+      };
+    }
+  }
 });
 
 /***/ }),
@@ -296,6 +303,11 @@ __webpack_require__(/*! element-ui/lib/theme-chalk/index.css */ "./node_modules/
      */
     imageExistsOnServer: function imageExistsOnServer() {
       return Boolean(this.field.previewUrl);
+    },
+    novaWidth: function novaWidth() {
+      return {
+        maxWidth: this.novaWidth + 'px'
+      };
     }
   },
   mounted: function mounted() {
@@ -487,10 +499,6 @@ __webpack_require__.r(__webpack_exports__);
     ratio: {
       type: Number,
       "default": 1
-    },
-    novaWidth: {
-      type: Number,
-      "default": 150
     }
   },
   data: function data() {
@@ -651,11 +659,6 @@ __webpack_require__.r(__webpack_exports__);
     wrapperStyle: function wrapperStyle() {
       return {
         padding: '10px 20px'
-      };
-    },
-    novaWidth: function novaWidth() {
-      return {
-        maxWidth: this.novaWidth + 'px'
       };
     }
   },

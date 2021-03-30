@@ -12,7 +12,16 @@
 
 <script>
 export default {
-  props: ['resource', 'resourceName', 'resourceId', 'field']
+  props: ['resource', 'resourceName', 'resourceId', 'field'],
+
+
+  computed:{
+    novaWidth() {
+        return {
+          maxWidth: this.novaWidth + 'px'
+        }
+      }
+  }
 };
 </script>
 <style scoped>

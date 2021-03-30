@@ -83,13 +83,7 @@ export default {
       return {
         padding: '10px 20px'
       }
-    },
-
-    novaWidth() {
-        return {
-          maxWidth: this.novaWidth + 'px'
-        }
-      }
+    }
   },
 
   watch: {

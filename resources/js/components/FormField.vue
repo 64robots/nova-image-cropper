@@ -90,7 +90,13 @@ export default {
      */
     imageExistsOnServer() {
       return Boolean(this.field.previewUrl)
-    }
+    },
+
+    novaWidth() {
+        return {
+          maxWidth: this.novaWidth + 'px'
+        }
+      }
   },
 
   mounted() {
