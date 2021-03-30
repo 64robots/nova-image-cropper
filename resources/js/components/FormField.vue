@@ -64,7 +64,7 @@ export default {
 
   mixins: [FormField, HandlesValidationErrors],
 
-  props: ['resourceName', 'resourceId', 'field'],
+  props: ['resourceName', 'resourceId', 'field', 'novaWidth'],
 
   data() {
     return {
@@ -94,7 +94,7 @@ export default {
 
     novaWidth() {
         return {
-          maxWidth: this.novaWidth + 'px'
+          width: this.novaWidth + 'px'
         }
       }
   },

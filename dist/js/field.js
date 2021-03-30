@@ -181,7 +181,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['resource', 'resourceName', 'resourceId', 'field'],
+  props: ['resource', 'resourceName', 'resourceId', 'field', 'novaWidth'],
   computed: {
     novaWidth: function novaWidth() {
       return {
@@ -279,7 +279,7 @@ __webpack_require__(/*! element-ui/lib/theme-chalk/index.css */ "./node_modules/
     PicturePicker: _PicturePicker__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   mixins: [laravel_nova__WEBPACK_IMPORTED_MODULE_1__["FormField"], laravel_nova__WEBPACK_IMPORTED_MODULE_1__["HandlesValidationErrors"]],
-  props: ['resourceName', 'resourceId', 'field'],
+  props: ['resourceName', 'resourceId', 'field', 'novaWidth'],
   data: function data() {
     return {
       deleting: false,
@@ -306,7 +306,7 @@ __webpack_require__(/*! element-ui/lib/theme-chalk/index.css */ "./node_modules/
     },
     novaWidth: function novaWidth() {
       return {
-        maxWidth: this.novaWidth + 'px'
+        width: this.novaWidth + 'px'
       };
     }
   },
