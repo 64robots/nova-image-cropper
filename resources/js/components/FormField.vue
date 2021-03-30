@@ -27,7 +27,7 @@
             </div>
             <img
               :src="value"
-              style="novaWidth"
+              :style="{width: novaWidth + 'px'}"
               :class="{ avatar: field.isAvatar }"
             >
           </template>
@@ -91,13 +91,6 @@ export default {
     imageExistsOnServer() {
       return Boolean(this.field.previewUrl)
     },
-
-    novaWidth() {
-        console.log(this.novaWidth)
-        return {
-          width: this.novaWidth + 'px'
-        }
-      }
   },
 
   mounted() {
