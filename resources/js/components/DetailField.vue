@@ -17,6 +17,7 @@ export default {
 
   computed:{
     novaWidth() {
+        console.log('nova width detail')
         return {
           maxWidth: this.novaWidth + 'px'
         }

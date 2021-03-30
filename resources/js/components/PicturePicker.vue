@@ -54,7 +54,7 @@ export default {
 
   components: { PicturePickerFile, PictureCropper },
 
-  props: ['value', 'isAvatar', 'aspectRatio', 'novaWidth'],
+  props: ['value', 'isAvatar', 'aspectRatio'],
 
   data() {
     return {

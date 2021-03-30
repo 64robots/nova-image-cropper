@@ -184,6 +184,7 @@ __webpack_require__.r(__webpack_exports__);
   props: ['resource', 'resourceName', 'resourceId', 'field', 'novaWidth'],
   computed: {
     novaWidth: function novaWidth() {
+      console.log('nova width detail');
       return {
         maxWidth: this.novaWidth + 'px'
       };
@@ -635,7 +636,7 @@ __webpack_require__.r(__webpack_exports__);
     PicturePickerFile: _PicturePickerFile__WEBPACK_IMPORTED_MODULE_1__["default"],
     PictureCropper: _PictureCropper__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
-  props: ['value', 'isAvatar', 'aspectRatio', 'novaWidth'],
+  props: ['value', 'isAvatar', 'aspectRatio'],
   data: function data() {
     return {
       hash: Math.random().toString(36).substring(7),
@@ -37032,7 +37033,7 @@ var render = function() {
                       _vm._v(" "),
                       _c("img", {
                         class: { avatar: _vm.field.isAvatar },
-                        staticStyle: {},
+                        style: _vm.novaWidth,
                         attrs: { src: _vm.value }
                       })
                     ]

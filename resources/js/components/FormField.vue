@@ -27,7 +27,7 @@
             </div>
             <img
               :src="value"
-              style="novaWidth"
+              :style="novaWidth"
               :class="{ avatar: field.isAvatar }"
             >
           </template>
