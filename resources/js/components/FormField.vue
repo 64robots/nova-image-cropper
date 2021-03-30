@@ -26,7 +26,7 @@
             </div>
             <img
               :src="value"
-              :style="{width: field.novaWidth + 'px'}"
+              :style="{width: field.width + 'px'}"
               :class="{ avatar: field.isAvatar }"
             >
           </template>
