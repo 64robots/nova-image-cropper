@@ -26,6 +26,7 @@
             </div>
             <img
               :src="value"
+              :style="{width: field.width + 'px'}"
               :class="{ avatar: field.isAvatar }"
             >
           </template>
@@ -62,7 +63,7 @@ export default {
 
   mixins: [FormField, HandlesValidationErrors],
 
-  props: ['resourceName', 'resourceId', 'field'],
+  props: ['resourceName', 'resourceId', 'field', 'width'],
 
   data() {
     return {

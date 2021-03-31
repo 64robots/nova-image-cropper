@@ -4,6 +4,7 @@
       <img
         :src="field.thumbnailUrl"
         :class="{ avatar: field.isAvatar }"
+        :style="{width: field.width + 'px'}"
       />
     </div>
   </panel-item>
@@ -11,7 +12,7 @@
 
 <script>
 export default {
-  props: ['resource', 'resourceName', 'resourceId', 'field']
+  props: ['resource', 'resourceName', 'resourceId', 'field', 'width'],
 };
 </script>
 <style scoped>
