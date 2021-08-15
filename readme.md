@@ -48,13 +48,19 @@ ImageCropper::make('Photo')->avatar()
 
 #### Custom aspect ratio
 
-Define the fixed aspect ratio of the crop box. By default, the crop box is free ratio.
+Define the fixed aspect ratio of the crop box.
 
 - Type: Number
 - Default: NaN
 
 ```php
 ImageCropper::make('Photo')->aspectRatio(16/9)
+```
+
+For free ratio use:
+
+```php
+ImageCropper::make('Photo')->aspectRatio(0)
 ```
 
 ### Localization
