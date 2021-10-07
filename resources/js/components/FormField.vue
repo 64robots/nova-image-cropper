@@ -36,15 +36,13 @@
             class="my-2 text-danger"
           >{{ firstError }}</p>
 
-          <portal to="modals">
-            <transition name="fade">
-              <confirm-upload-removal-modal
-                v-if="removeModalOpen"
-                @confirm="removeFile"
-                @close="closeRemoveModal"
-              />
-            </transition>
-          </portal>
+          <transition name="fade">
+            <confirm-upload-removal-modal
+              v-if="removeModalOpen"
+              @confirm="removeFile"
+              @close="closeRemoveModal"
+            />
+          </transition>
         </div>
       </loading-view>
     </template>
